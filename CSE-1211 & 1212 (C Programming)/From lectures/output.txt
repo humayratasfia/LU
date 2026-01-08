@@ -1,0 +1,3 @@
+With Pointer: 
+Before updating a, address in a = 6422084, a = 10, b = 10 
+After updating a, address in a = 6422084, a = 20, b = 20 
