@@ -1,0 +1,10 @@
+Humayra,700,Easy
+Nurat,1000,Easy
+Humayra,700,Easy
+Tabassum,700,Easy
+Mahya,1300,Medium
+Jawad,1600,Medium
+Humayra,1300,Medium
+Humayra,1000,Easy
+Tasfia,1100,Easy
+Somusa,2100,Hard
