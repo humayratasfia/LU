@@ -1,2 +1,2 @@
-Result: 3
-a: 4
+Size: Array Input: Search for: Found at Index: 3
+Insert: New Array: 1 2 3 6 4 
