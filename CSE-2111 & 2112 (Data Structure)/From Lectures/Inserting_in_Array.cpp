@@ -20,7 +20,7 @@ int main()
 
     cout << "Found at Index: "; // If found then prints the index no.
     int j = 0;
-    while(a[j] != n)
+    while(a[j] != n) // Keeps track of index.
     {
         j++;
     }
