@@ -22,10 +22,10 @@ int main()
         
         cout << "Pass " << i+1 << ": " << endl;
         for(int k=0;k<n;k++)
-            {
-                cout << a[k] << " ";
-            }
-            cout << endl;
+        {
+            cout << a[k] << " ";
+        }
+        cout << endl;
             
         for(int j=0;j<n-1-i;j++)
         {
