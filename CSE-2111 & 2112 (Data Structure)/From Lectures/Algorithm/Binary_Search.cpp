@@ -22,7 +22,7 @@ int main()
     int h = n-1; // Higher Bound
     int mid = (l + h) / 2; // Mid value.
 
-    while(l<=h) // Binary Search
+    while(l<=h) // Binary Search - T.C: O(logN)
     {
         if(item == a[mid])
         {

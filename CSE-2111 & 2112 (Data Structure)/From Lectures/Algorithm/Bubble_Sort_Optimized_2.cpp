@@ -16,7 +16,7 @@ int main()
     }
 
     cout << "Bubble Sort: " << endl;
-    for(int i=0;i<n-1;i++)
+    for(int i=0;i<n-1;i++) // Bubble Sort Optimized - T.C: O(N^2)
     {
         int swapped = 0;
         
@@ -29,10 +29,10 @@ int main()
             
         for(int j=0;j<n-1-i;j++)
         {
-            if(a[j] > a[j+1])
+            if(a[j] > a[j+1]) // If a value is greater than its next value then swap.
             {
                 swap(a[j], a[j+1]);
-                swapped++;
+                swapped++; // Keeps track of number of times value has been swapped in a pass.
             }
             
             for(int k=0;k<n;k++)
