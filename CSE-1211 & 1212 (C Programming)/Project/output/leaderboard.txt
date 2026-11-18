@@ -8,3 +8,4 @@ Humayra,1300,Medium
 Humayra,1000,Easy
 Tasfia,1100,Easy
 Somusa,2100,Hard
+Somusa,900,Easy

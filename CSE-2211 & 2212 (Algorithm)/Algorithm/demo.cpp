@@ -3,42 +3,66 @@ using namespace std;
 
 int main()
 {
-    // Take the size of the array from the user.
-    int n;
-    cout << "Array Size: ";
-    cin >> n;
+    int n, m; // Node, Edge
+    cin >> n >> m;
 
-    // Input the Array.
-    int a[n];
-    cout << "Insert Array: ";
-    for(int i=0;i<n;i++)
+    vector <int> adj[100];
+
+    for(int i=0;i<m;i++)
     {
-        cin >> a[i];
+        int u, v;
+        cin >> u >> v;
+
+        adj[u].push_back(v);
     }
 
-    // Insertion Sort Algorithm:
-    for(int i=1;i<n;i++) 
-    /* Since the 1st value has no other value before it to compare with
-    so 1 loop is less in this specific for loop*/
-    {
-        int j = i-1;
+    vector <int> indegree(n, 0);
 
-        while(a[j]>a[i] && j>=0)
+    for(int i=0;i<n;i++)
+    {
+        for(int v: adj[i])
         {
-            a[j+1] = a[j];
-            j--;
+            indegree[v]++;
         }
-
-        a[j+1] = a[i];
     }
 
-    // Prints the Updated Array.
-    cout << "Updated Array: ";
+    queue <int> q;
     for(int i=0;i<n;i++)
     {
-        cout << a[i] << " ";
+        if(indegree[i] == 0)
+        {
+            q.push(i);
+        }
     }
-    cout << endl;
+
+    vector <int> topo_sort;
+    while(!q.empty())
+    {
+        int Node = q.front();
+        q.pop();
+        
+        topo_sort.push_back(Node);
+        for(int v: adj[Node])
+        {
+            indegree[v]--;
+            if(indegree[v] == 0)
+            {
+                q.push(v);
+            }
+        }
+    }
+
+    if(n!=topo_sort.size())
+    {
+        cout << "Topological sort not possible.";
+    }
+    else{
+        for(int v: topo_sort)
+        {
+            cout << v << " ";
+        }
+        cout << endl;
+    }
 
     return 0;
 }
